@@ -1,0 +1,8 @@
+src/main/resources
+bin
+out/production/demo-vertx-module
+out/test/demo-vertx-module
+build/deps
+build/classes/main
+build/resources/main
+build/classes/main/com/mycompany/myproject
