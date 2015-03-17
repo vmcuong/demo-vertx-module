@@ -18,7 +18,7 @@ public class LoginVerticle extends Verticle {
                 request.bodyHandler(new Handler<Buffer>() {
                     public void handle(Buffer buffer) {
                         String postData=buffer.toString();
-                        request.response().putHeader("content-type", "text/plain");
+                        request.response().putHeader("content-type", "application/json");
                         request.response().end(postData);
                     }
                 });
