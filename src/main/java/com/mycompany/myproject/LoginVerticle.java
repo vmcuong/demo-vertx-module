@@ -22,7 +22,9 @@ public class LoginVerticle extends Verticle {
 
         HttpServer server = vertx.createHttpServer();
 
-        server.requestHandler(new RouteMatcher().get("/login", new Handler<HttpServerRequest>() {
+        server.requestHandler(
+                //new RouteMatcher().get("/login",
+                        new Handler<HttpServerRequest>() {
             public void handle(final HttpServerRequest request) {
                 request.bodyHandler(new Handler<Buffer>() {
                     public void handle(Buffer buffer) {
@@ -133,6 +135,8 @@ public class LoginVerticle extends Verticle {
 
 
                 }
-                })).listen(8080);
+                }
+        //)
+        ).listen(8080);
             }
         }
