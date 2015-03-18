@@ -38,11 +38,17 @@ public class ModMySQLConnector extends Verticle {
                 "database" : <name-of-your-database>
         }*/
         container.deployModule("io.vertx~mod-mysql-postgresql_2.11~0.3.1", conf,1 );
-/*        {
-            "action" : "select",
-                "table" : "some_test",
-                "fields" : ["name", "email", "is_male", "age", "money", "wedding_date"], // Optional
-        }*/
+        //
+        JsonObject confAuth=new JsonObject();
+        confAuth.putString("address" , "mmsoft.mysql.token");
+        confAuth.putString("connection", "MySQL");
+        confAuth.putString("host" , "52.64.11.136");
+        confAuth.putNumber("port", 3306);
+        confAuth.putNumber("maxPoolSize", 10);
+        confAuth.putString("username", "admin");
+        confAuth.putString("password","@dmin123!");
+        confAuth.putString("database","timo_token_db");
 
+        container.deployModule("io.vertx~mod-mysql-postgresql_2.11~0.3.1", confAuth,1 );
     }
 }

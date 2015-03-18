@@ -19,6 +19,7 @@ public class StartApp extends Verticle {
                 }
             }
         });*/
-        container.deployVerticle("com.mycompany.myproject.GetUserDataVerticle");
+       // container.deployVerticle("com.mycompany.myproject.GetUserDataVerticle");
+        container.deployVerticle("com.mycompany.myproject.LoginVerticle");
     }
 }

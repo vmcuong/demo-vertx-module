@@ -8,10 +8,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Set;
 
 public class MD5Gen {
-    public MD5Gen(){
 
-    }
-    public String EncryptString(String inputString){
+    public static String EncryptString(String inputString){
         try {
 
            // String inputString = "connect";
